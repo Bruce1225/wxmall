@@ -1,17 +1,22 @@
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-	http://www.springframework.org/schema/context
-	http://www.springframework.org/schema/context/spring-context-4.0.xsd
-	http://www.springframework.org/schema/aop
-	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
-	http://www.springframework.org/schema/tx
-	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
-	http://www.springframework.org/schema/util 
-	http://www.springframework.org/schema/util/spring-util-4.0.xsd
- 	http://www.springframework.org/schema/task
-    http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:task="http://www.springframework.org/schema/task"
+    xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans 
+	    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util-4.0.xsd
+	 	http://www.springframework.org/schema/task
+	    http://www.springframework.org/schema/task/spring-task-4.0.xsd">
 
     <!-- 扫描包 -->
     <context:component-scan base-package="com.wx" >
@@ -62,7 +67,7 @@
         <!-- 指定Mybatis的全局配置文件 -->
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!-- 定义mapper.xml扫描器 -->
-        <property name="mapperLocations" value="classpath:com/wx/dao/**/*.xml"/>
+        <property name="mapperLocations" value="classpath:mappers/*.xml"/>
         <!-- 定义别名扫描包 -->
         <property name="typeAliasesPackage" value="com.wx.vo"/>
     </bean>

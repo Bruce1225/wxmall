@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- 注解驱动 -->
+	 <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager" />
+
+	<bean id="contentNegotiationManager"
+		class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+		<property name="favorPathExtension" value="false" />
+		<property name="favorParameter" value="false" />
+		<property name="ignoreAcceptHeader" value="false" />
+		<property name="mediaTypes">
+			<value>
+				html=text/html
+				json=application/json
+				 *=*/*
+		   </value>
+		</property>
+	</bean>
+	
+	<!-- 配置扫描包 -->
+	<context:component-scan base-package="com.wx.controller" />
+	<!-- 配置视图解析器 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+		<!-- 前缀 -->
+		<property name="prefix" value="/jsp/" />
+		<!-- 后缀 -->
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<mvc:resources mapping="/images/**" location="/images/" />
+	<mvc:resources mapping="/bootstrap/**" location="/bootstrap/" />
+	<mvc:resources mapping="/css/**" location="/css/" /> 
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<!-- 定义文件上传解析器 便于上传文件 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设定默认编码 -->
+		<property name="defaultEncoding" value="UTF-8"></property>
+		<!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+		<property name="maxUploadSize" value="5242880"></property>
+	</bean>
+
+	
+ <!--	 <mvc:interceptors>
+        &lt;!&ndash;  <mvc:interceptor>
+            设置拦截的路径  
+            <mvc:mapping path="/**" />  
+            <mvc:mapping path="/V1.35" />  
+            <mvc:exclude-mapping path="/ws/**"/> 
+            <mvc:exclude-mapping path="/test/**"/> 
+            <bean id="paramInterceptor" class="com.haoyishu.interceptor.ParamInterceptor"/>  
+        </mvc:interceptor>   &ndash;&gt;
+        <mvc:interceptor>
+           &lt;!&ndash;  设置拦截的路径  &ndash;&gt;
+            <mvc:mapping path="/live/**" />
+            <mvc:mapping path="/V1.4/**" />
+            <mvc:exclude-mapping path="/live/register"/>
+            <bean id="paramInterceptor" class="com.huanyin.interceptor.LivePathInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>  -->
+
+
+</beans>

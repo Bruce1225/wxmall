@@ -1,6 +1,7 @@
-/target/
-.idea
-.settings
-*.iml
-.classpath
+.idea/
+.settings/
+classes/
 .project
+.classpath
+target/
+wxmall.iml

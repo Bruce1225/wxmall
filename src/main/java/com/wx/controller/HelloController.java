@@ -1,6 +1,7 @@
 package com.wx.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -13,6 +14,11 @@ public class HelloController {
     @RequestMapping("/hello")
     public String helloPage(){
         return "hello";
+    }
+
+    @RequestMapping("/page/{pageName}")
+    public String showPage(@PathVariable(value = "pageName") String pageName){
+        return pageName;
     }
 
 }

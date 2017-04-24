@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wx.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.wx.model.User" >
+    <constructor >
+      <idArg column="uid" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="wxid" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="real_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="nick_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="birthday" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="age" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="address" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="gender" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="wx_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="login_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="password" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="phone1" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="phone2" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="phone3" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="id_card_no" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="head_pic" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="account" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="score" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="last_login_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="source" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="user_type" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="isdel" jdbcType="BIT" javaType="java.lang.Boolean" />
+    </constructor>
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+			<if test="wxid!=null and wxid!=''">
+				and wxid like '%' + LTRIM(RTRIM('${wxid}')) + '%'
+			</if>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    uid, wxid, real_name, nick_name, birthday, age, address, gender, wx_name, login_name, 
+    password, phone1, phone2, phone3, id_card_no, head_pic, account, score, last_login_time, 
+    source, user_type, isdel
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wx.model.UserExample" >
+    select * from (
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'false' as QUERYID,
+    <choose >
+      <when test="orderByClause != null" >
+        row_number() over(order by ${orderByClause}) AS __row_number__ , 
+      </when>
+      <otherwise >
+        row_number() over(order by uid) AS __row_number__ , 
+      </otherwise>
+    </choose>
+    <include refid="Base_Column_List" />
+    from user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    ) __t__  where __row_number__ between #{limitStart} and #{limitEnd}
+  </select>
+  <select id="countByExample" parameterType="com.wx.model.UserExample" resultType="java.lang.Integer" >
+    select count(*) from user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  
+	<select id="selectByParams" resultMap="BaseResultMap" parameterType="java.util.Map">
+		SELECT * FROM user user
+	    <include refid="Example_Where_Clause"></include>
+	</select>
+</mapper>

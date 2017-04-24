@@ -18,6 +18,12 @@
     <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <style type="text/css">
+        html {
+            -ms-overflow-style:none;
+            overflow:-moz-scrollbars-none;
+        }
+        html::-webkit-scrollbar{width:0px}
+
         * { margin-top: 0px;
             margin-bottom:0px;
             margin-left:0px;
@@ -30,6 +36,17 @@
 
         #category-head {width:100%;display: inline;white-space: nowrap;overflow-x:scroll;float:left;overflow-y:hidden}
         #category-head li{display:inline-block;width:160px; padding-left:0px;}
+
+        #category-head1 {width:100%;display: inline;white-space: nowrap;overflow-x:scroll;float:left;overflow-y:hidden}
+        #category-head1 li{display:inline-block;width:160px; padding-left:0px;}
+
+        #category-head2 {width:100%;display: inline;white-space: nowrap;overflow-x:scroll;float:left;overflow-y:hidden}
+        #category-head2 li{display:inline-block;width:160px; padding-left:0px;}
+
+        #category-head3 {width:100%;display: inline;white-space: nowrap;overflow-x:scroll;float:left;overflow-y:hidden}
+        #category-head3 li{display:inline-block;width:160px; padding-left:0px;}
+
+
     </style>
 
 </head>
@@ -179,7 +196,7 @@
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="/bootstrap/jsi/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/bootstrap/js/bootstrap.js"></script>
 </body>

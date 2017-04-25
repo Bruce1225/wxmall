@@ -18,11 +18,11 @@
     <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <style type="text/css">
-        html {
-            -ms-overflow-style:none;
-            overflow:-moz-scrollbars-none;
-        }
-        html::-webkit-scrollbar{width:0px}
+        /*html {*/
+            /*-ms-overflow-style:none;*/
+            /*overflow:-moz-scrollbars-none;*/
+        /*}*/
+        html::-webkit-scrollbar{width:0px; height: 0px}
 
         * { margin-top: 0px;
             margin-bottom:0px;
@@ -45,11 +45,10 @@
 
         #category-head3 {width:100%;display: inline;white-space: nowrap;overflow-x:scroll;float:left;overflow-y:hidden}
         #category-head3 li{display:inline-block;width:160px; padding-left:0px;}
-
-
     </style>
 
 </head>
+
 <body>
 <div class="container-fluid">
     <div class="row">
@@ -172,7 +171,7 @@
     </div>
     <div class ="row">
         <ul class="flex-layout category-head" id="category-head" style="margin-bottom: 0px" >
-            <li ><img src="/images/timg-1.jpeg" width="160" height="120" > </li>
+            <li ><img src="/images/timg-1.jpeg" width="160" height="120"> </li>
             <li ><img src="/images/timg-2.jpeg" width="160" height="120"> </li>
             <li ><img src="/images/timg-3.jpeg" width="160" height="120"> </li>
             <li ><img src="/images/timg-5.jpeg" width="160" height="120"> </li>
@@ -182,7 +181,6 @@
         </ul>
     </div>
 
-
     <div class="row">
         <div  class="col-xs-12">
             <div style=" text-align: center; background-color: #bdbdbd; padding-top:5px;
@@ -190,7 +188,6 @@
                 这是底下的悬浮框iii
             </div>
         </div>
-
     </div>
 </div>
 

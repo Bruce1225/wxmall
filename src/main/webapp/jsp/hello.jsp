@@ -15,7 +15,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <style type="text/css">
 
@@ -82,13 +82,13 @@
     </div>
     <div class="row">
         <ul class="flex-layout category-head" id="category-head1" style="margin-bottom: 0px" >
-            <li ><img src="/images/timg-1.jpeg" width="160" height="120" > </li>
-            <li ><img src="/images/timg-2.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-3.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-5.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-6.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-7.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-8.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-1.jpeg" width="160" height="120" > </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-2.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-3.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-5.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-6.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-7.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-8.jpeg" width="160" height="120"> </li>
         </ul>
     </div>
     <div class="row">
@@ -110,13 +110,13 @@
     </div>
     <div class ="row">
         <ul class="flex-layout category-head" id="category-head2" style="margin-bottom: 0px" >
-            <li ><img src="/images/timg-1.jpeg" width="160" height="120" > </li>
-            <li ><img src="/images/timg-2.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-3.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-5.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-6.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-7.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-8.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-1.jpeg" width="160" height="120" > </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-2.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-3.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-5.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-6.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-7.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-8.jpeg" width="160" height="120"> </li>
         </ul>
     </div>
 
@@ -138,13 +138,13 @@
     </div>
     <div class="row">
         <ul class="flex-layout category-head" id="category-head3" style="margin-bottom: 0px" >
-            <li ><img src="/images/timg-1.jpeg" width="160" height="120" > </li>
-            <li ><img src="/images/timg-2.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-3.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-5.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-6.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-7.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-8.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-1.jpeg" width="160" height="120" > </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-2.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-3.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-5.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-6.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-7.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-8.jpeg" width="160" height="120"> </li>
         </ul>
     </div>
     <div class="row">
@@ -166,13 +166,13 @@
     </div>
     <div class ="row">
         <ul class="flex-layout category-head" id="category-head" style="margin-bottom: 0px" >
-            <li ><img src="/images/timg-1.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-2.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-3.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-5.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-6.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-7.jpeg" width="160" height="120"> </li>
-            <li ><img src="/images/timg-8.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-1.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-2.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-3.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-5.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-6.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-7.jpeg" width="160" height="120"> </li>
+            <li ><img src="<%=request.getContextPath()%>/images/timg-8.jpeg" width="160" height="120"> </li>
         </ul>
     </div>
 

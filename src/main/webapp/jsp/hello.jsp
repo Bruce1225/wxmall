@@ -18,11 +18,6 @@
     <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <style type="text/css">
-        /*html {*/
-            /*-ms-overflow-style:none;*/
-            /*overflow:-moz-scrollbars-none;*/
-        /*}*/
-        html::-webkit-scrollbar{width:0px; height: 0px}
 
         * { margin-top: 0px;
             margin-bottom:0px;
@@ -193,7 +188,7 @@
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/bootstrap/jsi/jquery.min.js"></script>
+<script src="/bootstrap/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/bootstrap/js/bootstrap.js"></script>
 </body>

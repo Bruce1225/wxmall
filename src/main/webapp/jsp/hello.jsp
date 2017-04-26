@@ -188,8 +188,8 @@
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/bootstrap/js/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/bootstrap/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/bootstrap/js/bootstrap.js"></script>
+<script src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
